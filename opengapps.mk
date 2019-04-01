@@ -60,7 +60,7 @@ else
 			GmsCoreSetupPrebuilt
 
 	#Add none android tv apps if PRODUCT_CHARACTERISTICS :=phone or PRODUCT_CHARACTERISTICS :=tablet
-	ifeq ($(filter phone tablet,$(PRODUCT_CHARACTERISTICS),)
+	ifeq ($(filter phone tablet,$(PRODUCT_CHARACTERISTICS)),)
 		#Extra Apps I Really Want In My Custom Rom For Phone
 		GAPPS_PRODUCT_PACKAGES += \
 				FaceLock \
