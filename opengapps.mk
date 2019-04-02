@@ -8,6 +8,7 @@ else
 	#Common Apps I Really Want In My Custom Rom
 	GAPPS_PRODUCT_PACKAGES +=\
 			YouTube \
+			DMAgent \
 			talkback \
 			GoogleBackupTransport \
 			GoogleLoginService \
@@ -21,6 +22,7 @@ else
 			AndroidPlatformServices \
 			Chrome \
 			GoogleExtServices \
+			GoogleExtShared \
 			GoogleFeedback \
 			GoogleOneTimeInitializer \
 			GooglePackageInstaller \
@@ -30,11 +32,13 @@ else
 			Phonesky \
 			PrebuiltGmsCore \
 			PrebuiltGmsCoreInstantApps \
-			GmsCoreSetupPrebuilt
+			GmsCoreSetupPrebuilt \
+			StorageManagerGoogle
 	
 	# Setting
 	GAPPS_PACKAGE_OVERRIDES := \
 			YouTube \
+			DMAgent \
 			talkback \
 			GoogleBackupTransport \
 			GoogleLoginService \
@@ -48,6 +52,7 @@ else
 			AndroidPlatformServices \
 			Chrome \
 			GoogleExtServices \
+			GoogleExtShared \
 			GoogleFeedback \
 			GoogleOneTimeInitializer \
 			GooglePackageInstaller \
@@ -57,7 +62,9 @@ else
 			Phonesky \
 			PrebuiltGmsCore \
 			PrebuiltGmsCoreInstantApps \
-			GmsCoreSetupPrebuilt
+			GmsCoreSetupPrebuilt \
+			StorageManagerGoogle \
+			GooglePrintRecommendationService
 
 	#Add none android tv apps if PRODUCT_CHARACTERISTICS :=phone or PRODUCT_CHARACTERISTICS :=tablet
 	ifeq ($(filter phone tablet,$(PRODUCT_CHARACTERISTICS)),)
@@ -67,24 +74,29 @@ else
 				libfilterpack_facedetect \
 				GoogleCalendarSyncAdapter \
 				GoogleContactsSyncAdapter \
+				GoogleContacts \
 				CalculatorGoogle \
 				PixelLauncherIcons \
 				CalendarGooglePrebuilt \
 				PrebuiltDeskClockGoogle \
 				PrebuiltExchange3Google \
-				PrebuiltGmail
+				PrebuiltGmail \
+				GoogleCamera
 				
 		GAPPS_PACKAGE_OVERRIDES := \
 				FaceLock \
 				libfilterpack_facedetect \
 				GoogleCalendarSyncAdapter \
 				GoogleContactsSyncAdapter \
+				GoogleContacts \
 				CalculatorGoogle \
 				PixelLauncherIcons \
 				CalendarGooglePrebuilt \
 				PrebuiltDeskClockGoogle \
 				PrebuiltExchange3Google \
-				PrebuiltGmail
+				PrebuiltGmail \
+				GoogleCamera
+				
 	endif
 	
 	#Add TagGoogle & Wallet If BOARD_HAVE_NFC :=true & DEVICE_SUPPORT_NFC :=true
@@ -146,4 +158,3 @@ endif
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 
 GAPPS_FORCE_MATCHING_DPI := true
-
