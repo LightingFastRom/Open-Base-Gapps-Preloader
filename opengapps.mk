@@ -8,7 +8,6 @@ else
 	#Common Apps I Really Want In My Custom Rom
 	GAPPS_PRODUCT_PACKAGES +=\
 			YouTube \
-			DMAgent \
 			talkback \
 			GoogleBackupTransport \
 			GoogleLoginService \
@@ -38,7 +37,6 @@ else
 	# Setting
 	GAPPS_PACKAGE_OVERRIDES := \
 			YouTube \
-			DMAgent \
 			talkback \
 			GoogleBackupTransport \
 			GoogleLoginService \
