@@ -55,7 +55,6 @@ else
 			GoogleOneTimeInitializer \
 			GooglePackageInstaller \
 			Photos \
-			SetupWizard \
 			GCS \
 			Phonesky \
 			PrebuiltGmsCore \
