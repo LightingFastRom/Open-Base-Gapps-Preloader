@@ -60,8 +60,7 @@ else
 			PrebuiltGmsCore \
 			PrebuiltGmsCoreInstantApps \
 			GmsCoreSetupPrebuilt \
-			StorageManagerGoogle \
-			GooglePrintRecommendationService
+			StorageManagerGoogle
 
 	#Add none android tv apps if PRODUCT_CHARACTERISTICS :=phone or PRODUCT_CHARACTERISTICS :=tablet
 	ifeq ($(filter phone tablet,$(PRODUCT_CHARACTERISTICS)),)
@@ -78,7 +77,8 @@ else
 				PrebuiltDeskClockGoogle \
 				PrebuiltExchange3Google \
 				PrebuiltGmail \
-				GoogleCamera
+				GoogleCamera \
+				Wallpapers
 				
 		GAPPS_PACKAGE_OVERRIDES := \
 				FaceLock \
@@ -92,7 +92,8 @@ else
 				PrebuiltDeskClockGoogle \
 				PrebuiltExchange3Google \
 				PrebuiltGmail \
-				GoogleCamera
+				GoogleCamera \
+				Wallpapers
 				
 	endif
 	
