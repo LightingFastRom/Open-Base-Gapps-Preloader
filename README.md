@@ -39,12 +39,14 @@ Add the code below at the end of your device's **device.mk** file
     
     # TODO: opengapps
     $(call inherit-product, vendor/opengapps.mk)
-
+WITH_GAPPS
+BOARD_PROVIDES_LIBRIL
 | Options| What They Do |
 |--|--|
+| WITH_GAPPS :=true | WITH_GAPPS allow's a user or dev to deside weather to use the add OpenGapps to there devies |
 | SLIM_THIS_DEVICE :=true | When SLIM_THIS_DEVICE is used Open Gapps mini variant will be used |
 | PRODUCT_CHARACTERISTICS :=phone or tablet| When PRODUCT_CHARACTERISTICS is ether phone or tablet none android tv apps will be added to your device |
 | BOARD_HAVE_NFC :=true | When BOARD_HAVE_NFC is used TagGoogle be added to your device |
-| DEVICE_HAS_DATALINE :=true | When DEVICE_HAS_DATALINE is used GoogleDialer CarrierServices PrebuiltBugle, Google Maps will be added Add to your device |
-| PRODUCT_CHARACTERISTICS :=phone | When PRODUCT_CHARACTERISTICS if phone is used Add FitnessPrebuilt & Wallet |
+| BOARD_PROVIDES_LIBRIL :=true | When BOARD_PROVIDES_LIBRIL is used  CarrierServices, Google Maps will be added Add to your device|
+| PRODUCT_CHARACTERISTICS :=phone | When PRODUCT_CHARACTERISTICS is phone is used Add GoogleDialer, PrebuiltBugle, But When PRODUCT_CHARACTERISTICS is phone is used alongside DEVICE_IS_FOR_GIM :=true FitnessPrebuilt & Wallet will be added Add to your device|
 | DEVICE_SUPPORT_DJ :=true | When DEVICE_SUPPORT_DJ is used cool apps that LightingFastRom developer like to use will be added to your device |
