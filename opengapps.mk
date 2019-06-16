@@ -156,13 +156,10 @@ ifeq ($(WITH_GAPPS), true)
 	  GAPPS_VARIANT := nano
 	  #Apps I Really Want In My Custom Rom
 	  GAPPS_PRODUCT_PACKAGES +=\
-		LatinImeGoogle \
-		GoogleCamera
-	  
+		LatinImeGoogle
 	  # Setting
 	  GAPPS_PACKAGE_OVERRIDES := \
-		LatinImeGoogle \
-		GoogleCamera
+		LatinImeGoogle
 	endif
   endif
   
