@@ -98,8 +98,8 @@ ifeq ($(WITH_GAPPS), true)
 		TagGoogle
 	endif
 	  
-	#Add GoogleDialer CarrierServices & PrebuiltBugle If BOARD_PROVIDES_LIBRIL :=true
-	ifeq ($(BOARD_PROVIDES_LIBRIL), true)
+	#Add GoogleDialer CarrierServices & PrebuiltBugle If DEVICE_HAS_DATELINE :=true
+	ifeq ($(DEVICE_HAS_DATELINE), true)
 	  #Extra Apps I Really Want In My Custom Rom For Devices With Datalines
 	  GAPPS_PRODUCT_PACKAGES += \
 		CarrierServices \
