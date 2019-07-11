@@ -159,7 +159,7 @@ ifeq ($(WITH_GAPPS), true)
 		LatinImeGoogle
 	  # Setting
 	  GAPPS_PACKAGE_OVERRIDES := \
-		LatinImeGoogle
+		HackersKeyboard
 	endif
   endif
   
