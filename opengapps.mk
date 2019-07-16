@@ -42,7 +42,7 @@ ifeq ($(WITH_GAPPS), true)
 	  GooglePartnerSetup \
 	  GooglePrintRecommendationService \
 	  GoogleServicesFramework \
-	  PicoTts \
+	  PicoTTS \
 	  WebViewGoogle \
 	  Turbo \
 	  AndroidPlatformServices \
