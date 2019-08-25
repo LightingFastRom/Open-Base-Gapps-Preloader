@@ -111,7 +111,7 @@ ifeq ($(WITH_GAPPS), true)
 	endif
 
 	#Add GoogleDialer If DEVICE_HAS_VOICE_CAPABILITY :=true(For Tablets only)
-	ifeq ($(PRODUCT_CHARACTERISTICS), phone)
+	ifeq ($(DEVICE_HAS_VOICE_CAPABILITY), true)
 	  #Extra Apps I Really Want In My Custom Rom For Phone
 	  GAPPS_PRODUCT_PACKAGES += \
 		GoogleDialer
