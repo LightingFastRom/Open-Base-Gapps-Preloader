@@ -103,10 +103,12 @@ ifeq ($(WITH_GAPPS), true)
 	  #Extra Apps I Really Want In My Custom Rom For Devices With Datalines
 	  GAPPS_PRODUCT_PACKAGES += \
 		CarrierServices \
+		PrebuiltBugle \
 		Maps
 	  
 	  GAPPS_PACKAGE_OVERRIDES := \
 		CarrierServices \
+		PrebuiltBugle \
 		Maps
 	endif
 
@@ -124,11 +126,9 @@ ifeq ($(WITH_GAPPS), true)
 	ifeq ($(PRODUCT_CHARACTERISTICS), phone)
 	  #Extra Apps I Really Want In My Custom Rom For Phone
 	  GAPPS_PRODUCT_PACKAGES += \
-		PrebuiltBugle \
 		GoogleDialer
 		
 	  GAPPS_PACKAGE_OVERRIDES := \
-		PrebuiltBugle \
 		GoogleDialer
 	  
 	  #Add FitnessPrebuilt & Wallet If DEVICE_IS_FOR_GIM :=true
